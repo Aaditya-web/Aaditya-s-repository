@@ -1,31 +1,60 @@
-menu_list_array = ["Chicken Tandoori Pizza",
-"Veg Supreme Pizza",
-"Paneer Tikka Pizza",
-"Deluxe Veggie Pizza",
-"Veg Extravaganza Pizza"];
+var last_position_of_x, last_position_of_y;
 
-function getmenu(){
-  var htmldata;
-  htmldata="<ol class='menulist'>"
-  menu_list_array.sort();
-  for(var i=0;i<menu_list_array.length;i++){
-      htmldata=htmldata+ '<li>' + menu_list_array[i] + '<li>'
+    canvas = document.getElementById('myCanvas');
+    ctx = canvas.getContext("2d");
     
-  }
-  htmldata=htmldata+"</ol>"
-  document.getElementById("display_menu").innerhtml = htmldata;
-}
+    color = "black";
+    width_of_line = 2;
 
-function add_item(){
-    var htmldata;
-    var item=document.getElementById("add_item").value;
-    menu_list_array.push(Item);
-    menu_list_array.sort();
-    htmldata="<secton class= 'cards'>"
-    for(var i=0;i<menu_list_array.length;i++){
-htmldata=htmldata+ '<div class=''card''>'+ '<img src= "images/pizzaImg.png"/>' + menu_list_array[i] + '</div>' 
+    var width= screen.width;
+
+    new_width= screen.width - 70;
+    new_height= screen.height - 300;
+
+    if(width < 992)
+    {
+        document.getElementById(new_width);
+        document.getElementById(new_height);
+        document.body.style.overflow = "hidden";
     }
- htmldata=htmldata+"</section>"
- document.getElementById("display_addedmenu").innerHTML = htmldata;
-}
 
+    canvas.addEventListener("touchstart", my_touchstart);
+    
+    function my_touchstart(e)
+    {
+        console.log("my_touchstart");
+        color = document.getElementById("color").value;
+        width_of_line = document.getElementById("width_of_line").value;
+        last_position_of_x = e.touches[0].clientX - canvas.offsetLeft;
+        last_position_of_y = e.touches[0].clientY - canvas.offsetTop;
+    }
+
+    canvas.addEventListener("touchmove", my_touchmove);
+    function my_touchmove(e)
+    {
+         console.log("my_touchmove");
+         current_position_of_touch_x = e.touches[0].clientX - canvas.offsetLeft;
+         current_position_of_touch_y = e.touches[0].clientY - canvas.offsetTop; 
+         
+
+{
+        ctx.beginPath();
+        ctx.strokeStyle = color;
+        ctx.lineWidth = width_of_line;
+
+        console.log("Last position of x and y coordinates = ");
+        console.log("x = " + last_position_of_x + "y = " + last_position_of_y);
+        ctx.moveTo(last_position_of_x, last_position_of_y);
+
+        console.log("Current position of x and y coordinates = ");
+        console.log("x  = " + current_position_of_touch_x + "y = " + current_position_of_touch_y);
+        ctx.lineTo(current_position_of_touch_x, current_position_of_touch_y);
+        ctx.stroke();
+        }
+
+        last_position_of_x = current_position_of_touch_x; 
+        last_position_of_y = current_position_of_touch_y;
+    }
+    function clearArea() 
+    { ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); 
+    }
