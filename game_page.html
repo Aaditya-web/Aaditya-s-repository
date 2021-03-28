@@ -12,26 +12,30 @@
 <script src="quiz_game_login.js"></script>
 </head>
 <body>
-<center>
+    div class="container">
+	<center>!
+		<h2 style="color: white;"></h2>Math Quiz</h2>
+		<h3 id="Player_Question">Player Question</h3>
+		<h3 id="Player_Answer">Player Answer</h3>
+		<div id="output" class="col-lg-6"></div>
 
-<h4 id="player_1_name"></h4> <span id="player_1_score"></span>
-<br>
+		<br>
+		<br>
+ 
+        <input type="text" id="Word" class="form-control" placeholder="Number 1">
+        <input type="text" id="Word" class="form-control" placeholder="Number 2">
+        
+        
 
-<h4 id="player_2_name"></h4> <span id="player_2_score"></span>
-<div class="container">
+		<br>
 
-        <h2 style="color: white;">The Math Quiz Game</h2>
+		<label>Send You Word: <b style="color: red">Try putting word which has 5 or more alphabet</b></label>
+		<br>
+		
+		<button onclick="send()" class="btn-btn success" style="width:30%;">Send</button>
+		<br>
 
-</div>
-
-
-<div id="output" class="col-lg-6">
-    <label>Question</label>
-    <label>Answer</label>
-    <input type="number" class="form-control"></input>
-
-</div>
-<center>
+	</center>
 </body>
 </html>
 
