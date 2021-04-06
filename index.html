@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kwitter</title>
-<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+	background-image: url("racing.gif");
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas
+{
+	border-width:10px;
+	background-color: white; 
+	border-style:ridge;
+}
 
+h1,h4
+{
+	color: white !important;
+}
+</style>		
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="kwitter.css">
-<script src="kwitter.js"></script>
+	<title>Moving Rover On</title>
 </head>
-<body>
+<body onload="add();">
 <center>
-
-  <div id="div" class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div" class="container">
-    <h1 class="header">	
-        LetsChat
-        <img src="logo.png">
-  </h1>
-      <input type="text" class="btn btn-success" id="user_name" class="form-control" placeholder="User Name">
-      <br>
-      <br>
-      <input type="text" class="btn btn-warning" id="password" class="form-control" placeholder="Password">
-      <br>
-      <br>
-      <button id="login_button" class="btn btn-primary" onclick="addUser()">Log in</button>
-      <br>
-      <br>
-    </div>
-
- 
+<h1>Car Racing Game</h1>
+	<canvas id="myCanvas" width="800" height="600"> 
+	</canvas>
+<h2>Game Status : <span id="game_status"></span></h2>
+<h4>
+	<b class= "text-danger">NOTE : </b> IF THE CARS ARE NOT VISIBLE, PRESS ANY ARROW KEY
+</h4>
 
 </center>
+<script src="main.js">
+</script>
+</body>
+</html>
