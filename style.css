@@ -1,23 +1,4 @@
-
-
-#output
+#game_status
 {
-    background: white;
-    border-radius: 10px;
-    border-top: 10px solid red;
-    padding:10px;
-    float: none;
-    text-align: left;
-
-
-}
-
-#container
-{
-    background-color: red;
-}
-
-#math_quiz
-{
-    color: white;
+  color: white;
 }
