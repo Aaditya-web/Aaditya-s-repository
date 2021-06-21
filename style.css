@@ -1,18 +1,23 @@
 
-h1
+
+#output
 {
-	color: red; 
-	font-size: 40px;
-}
-.body_backgorund {
- background-image:url(bg1.jpg);
- background-position: center;
- background-size:cover;
+    background: white;
+    border-radius: 10px;
+    border-top: 10px solid red;
+    padding:10px;
+    float: none;
+    text-align: left;
+
+
 }
 
-#myCanvas{
-	border-width: 10px;
-	background-color:white;
-	border-style:ridge;
-    align-items: center;
+#container
+{
+    background-color: red;
+}
+
+#math_quiz
+{
+    color: white;
 }

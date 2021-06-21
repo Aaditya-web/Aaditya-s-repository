@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CONSOLE WEB APP</title>
-<head>Project on Console</head>
+    <head>
+<title>The Math Quiz Game!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/query.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="quiz_game.css">
+
+<script src="quiz_game_login.js"></script>
 <body>
+<center>
 
-<p>Visual Studio Code is a freeware source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
-</p>
-<p> Console is generally known as the Output screen in Programming where we can compile and execute programs by giving commands.
-</p>
+<br>
 
-<script>
+<h4 id="player_2_name"></h4> <span id="player_2_score"></span>
+<div id="output" class="col-lg-6"></div>
+<div class="btn-danger"> Player 1 Login for the game
+    
+</div>
+<label >User Name:</label>
+<input type="text" id="player1_name_input" class="form-control" placeholder="Player 1 Name">
+<br>
 
-console.log("My First Console Project");
-var first_name = "Aaditya";
-console.log(first_name);
-var last_name = " Sengupta Dhar";
-console.log(last_name);
-var full_name = first_name.concat(last_name);
-console.log(full_name);
-
-var first_number = 10;
-var second_number = 5;
-var add = first_number + second_number;
-console.log(add);
-
-var subtract = first_number - second_number;
-console.log(subtract);
-
-var multiply = first_number * second_number;
-console.log(multiply);
-
-var division = first_number/second_number;
-console.log(division);
-
-</script>
-
+<div class="btn-danger"> Player 2 Login for the game</div>
+<label >User Name:</label>
+<input type="text" id="player2_name_input" class="form-control" placeholder="Player 2 Name">
+<button id="Login" onclick="login()">Login</button>
+</center>
 </body>
+</head>
 </html>
