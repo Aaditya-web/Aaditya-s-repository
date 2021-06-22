@@ -1,42 +1,46 @@
-canvas = document.getElementById("myCanvas");
-ctx = canvas.getContext("2d");
+function getParagraph1()
+{
+    var inputs= []
+    
+    for(var i = 1 ; i<=6 ; i++)
+    {
+        inputs.push(document.getElementById("para1_input_box_" + i).value);
+        inputs.join(".");
+    }
+    document.getElementById("showParagraph1").innerHTML = inputs.join(".");
 
-ctx.beginPath();
-ctx.strokeStyle = "red";
-ctx.lineWidth = 1;
-ctx.rect(150, 143, 430, 200);
-ctx.stroke();
+    for(var i = 2 ; i<=6 ; i++)
+    {
+        inputs.push(document.getElementById("para2_input_box_" + i).value);
+        inputs.join(".");
+    }
+    document.getElementById("showParagraph1").innerHTML = inputs.join(".");
 
-ctx.beginPath();
-ctx.strokeStyle = "blue";
-ctx.lineWidth = 5;
-ctx.arc(425, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
+    for(var i = 3 ; i<=6 ; i++)
+    {
+        inputs.push(document.getElementById("para3_input_box_" + i).value);
+        inputs.join(".");
+    }
+    document.getElementById("showParagraph1").innerHTML = inputs.join(".");
 
-ctx.beginPath();
-ctx.strokeStyle = "black";
-ctx.lineWidth = 5;
-ctx.arc(275, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
+    for(var i = 4 ; i<=6 ; i++)
+    {
+        inputs.push(document.getElementById("para4_input_box_" + i).value);
+        inputs.join(".");
+    }
+    document.getElementById("showParagraph1").innerHTML = inputs.join(".");
 
+    for(var i = 5 ; i<=6 ; i++)
+    {
+        inputs.push(document.getElementById("para5_input_box_" + i).value);
+        inputs.join(".");
+    }
+    document.getElementById("showParagraph1").innerHTML = inputs.join(".");
 
-ctx.beginPath();
-ctx.strokeStyle = "green";
-ctx.lineWidth = 5;
-ctx.arc(375, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
-
-
-ctx.beginPath();
-ctx.strokeStyle = "red";
-ctx.lineWidth = 5;
-ctx.arc(325, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
-
-
-
-ctx.beginPath();
-ctx.strokeStyle = "yellow";
-ctx.lineWidth = 5;
-ctx.arc(225, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
+    for(var i = 6 ; i<=6 ; i++)
+    {
+        inputs.push(document.getElementById("para6_input_box_" + i).value);
+        inputs.join(".");
+    }
+    document.getElementById("showParagraph1").innerHTML = inputs.join(".");
+}
